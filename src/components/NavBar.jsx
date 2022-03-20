@@ -1,17 +1,14 @@
 import React from "react";
+import Categories from "./Categories";
+import NavbarRight from "./NavbarRight";
 
 const Navbar = () => {
   return (
     <div className="nav">
       <div className="container">
         <h1 className="nav-title">sneakers</h1>
-        <div className="categories">
-          <h3>Collections</h3>
-          <h3>Men</h3>
-          <h3>Women</h3>
-          <h3>About</h3>
-          <h3>Contact</h3>
-        </div>
+        <Categories />
+        <NavbarRight />
       </div>
     </div>
   );
