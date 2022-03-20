@@ -26,4 +26,27 @@
       color: hsl(26, 100%, 55%);
     }
   }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    width: 100vh;
+    justify-content: flex-end;
+
+    .svg-cart {
+      svg {
+        color: red;
+      }
+    }
+
+    .avatar {
+      height: 3em;
+    }
+
+    img {
+      width: auto;
+      max-height: 100%;
+    }
+  }
 }
