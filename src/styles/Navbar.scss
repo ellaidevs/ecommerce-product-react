@@ -1,0 +1,29 @@
+.nav {
+  height: 4.5em;
+  position: relative;
+
+  .container {
+    display: flex;
+    gap: 4.5em;
+  }
+
+  .nav-title {
+    margin-left: 1em;
+  }
+
+  .categories {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+    justify-content: space-between;
+    color: hsl(219, 9%, 45%);
+  }
+
+  h3 {
+    &:hover {
+      cursor: pointer;
+      border-bottom: 3px solid hsl(26, 100%, 55%);
+      color: hsl(26, 100%, 55%);
+    }
+  }
+}
