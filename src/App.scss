@@ -1,13 +1,14 @@
-.App {
-  text-align: center;
+@import "styles/Navbar.scss";
+
+body {
+  background-color: hsl(0, 0%, 100%);
 }
 
-.nav {
-  background-color: red;
-  min-height: 4.5em;
+.App {
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .section {
-  background-color: green;
   height: 100vh;
 }
