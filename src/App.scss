@@ -1,14 +1,11 @@
-@import "styles/Navbar.scss";
+@import "styles/Navbar.scss", "styles/Section.scss";
 
 body {
   background-color: hsl(0, 0%, 100%);
+  // overflow: hidden;
 }
 
 .App {
   text-align: center;
   font-family: "Kumbh Sans", sans-serif;
-}
-
-.section {
-  height: 100vh;
 }

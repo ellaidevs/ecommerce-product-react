@@ -1,0 +1,22 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: red;
+  gap: 5em;
+
+  .left,
+  .right {
+    width: 90vh;
+    height: 80vh;
+  }
+
+  .left {
+    background-color: green;
+  }
+
+  .right {
+    background-color: blue;
+  }
+}
