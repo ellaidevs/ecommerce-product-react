@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background-color: red;
+  //   background-color: red;
   gap: 5em;
 
   .left,
@@ -13,7 +13,31 @@
   }
 
   .left {
-    background-color: green;
+    // background-color: green;
+
+    .product-display {
+      height: 27em;
+
+      img {
+        width: auto;
+        max-height: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .thumnails {
+      display: flex;
+      gap: 1em;
+      margin-top: 1em;
+      height: 6em;
+      justify-content: center;
+
+      img {
+        width: auto;
+        max-height: 100%;
+        border-radius: 10px;
+      }
+    }
   }
 
   .right {
