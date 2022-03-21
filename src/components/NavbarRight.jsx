@@ -6,7 +6,7 @@ const NavbarRight = () => {
   return (
     <div className="navbar-right">
       <div className="svg-cart">
-        <IconCart />
+        <IconCart className="icon-cart" />
       </div>
       <div className="avatar">
         <img src={Avatar} alt="profile-picture" />
