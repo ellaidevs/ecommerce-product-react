@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 90vh;
-  //   background-color: red;
+  background-color: red;
   gap: 5em;
 
   .left,
@@ -13,7 +13,7 @@
   }
 
   .left {
-    // background-color: green;
+    background-color: green;
 
     .product-display {
       height: 27em;
@@ -42,5 +42,72 @@
 
   .right {
     background-color: blue;
+
+    h4 {
+      color: hsl(26, 100%, 55%);
+      display: flex;
+      margin: 7em auto auto auto;
+      text-align: justify;
+    }
+
+    h1 {
+      display: flex;
+      margin: 0.2em auto 0.8 auto;
+    }
+
+    p {
+      color: hsl(219, 9%, 45%);
+      display: flex;
+      text-align: justify;
+    }
+
+    .price-container {
+      .price-inline {
+        display: flex;
+        .price-tag {
+          margin-bottom: 0;
+        }
+
+        .discount-tag {
+          background-color: hsl(25, 100%, 94%);
+          height: 1.5em;
+          width: auto;
+          max-height: 100%;
+        }
+      }
+
+      .before-discount {
+        display: flex;
+        margin-top: 0;
+        color: hsl(219, 9%, 45%);
+        text-decoration: 1px solid line-through;
+      }
+    }
+
+    .cart-container {
+      display: flex;
+
+      .counter {
+        display: flex;
+      }
+
+      .addToCartBtn {
+        button {
+          background-color: hsl(26, 100%, 55%);
+          border: none;
+          width: 15em;
+          height: 3em;
+          border-radius: 5px;
+          color: #fff;
+          font-family: "Kumbh Sans", sans-serif;
+          font-weight: 700;
+
+          .btn-cart-svg {
+            margin-right: 1em;
+            fill: white;
+          }
+        }
+      }
+    }
   }
 }
