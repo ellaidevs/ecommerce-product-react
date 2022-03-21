@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background-color: red;
+  // background-color: red;
   gap: 5em;
 
   .left,
@@ -41,12 +41,12 @@
   }
 
   .right {
-    background-color: blue;
+    // background-color: blue;
 
     h4 {
       color: hsl(26, 100%, 55%);
       display: flex;
-      margin: 7em auto auto auto;
+      margin: 5.5em auto auto auto;
       text-align: justify;
     }
 
@@ -64,23 +64,32 @@
     .price-container {
       .price-inline {
         display: flex;
+        gap: 0.7em;
+        // align-items: center;
+
         .price-tag {
           margin-bottom: 0;
         }
 
         .discount-tag {
           background-color: hsl(25, 100%, 94%);
-          height: 1.5em;
+          height: 1em;
           width: auto;
+          padding: 0.5em;
           max-height: 100%;
+          color: hsl(26, 100%, 55%);
+          margin-top: 1.7em;
         }
       }
 
       .before-discount {
         display: flex;
         margin-top: 0;
+        margin-bottom: 4em;
         color: hsl(219, 9%, 45%);
         text-decoration: 1px solid line-through;
+        position: relative;
+        top: -1.2em;
       }
     }
 
@@ -89,6 +98,11 @@
 
       .counter {
         display: flex;
+        background-color: hsl(223, 64%, 98%);
+
+        &:hover {
+          background-color: hsl(220, 14%, 75%);
+        }
       }
 
       .addToCartBtn {
