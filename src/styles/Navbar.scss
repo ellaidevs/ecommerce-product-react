@@ -41,11 +41,20 @@
 
     .svg-cart {
       svg {
+        fill: hsl(219, 9%, 45%);
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
     .avatar {
       height: 3em;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     img {
