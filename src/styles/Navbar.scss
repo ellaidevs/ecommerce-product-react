@@ -2,6 +2,11 @@
   height: 4.5em;
   position: relative;
 
+  hr {
+    margin: 0 2em;
+    opacity: 0.2;
+  }
+
   .container {
     display: flex;
     gap: 4.5em;

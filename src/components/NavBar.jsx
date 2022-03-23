@@ -10,6 +10,7 @@ const Navbar = () => {
         <Categories />
         <NavbarRight />
       </div>
+      <hr />
     </div>
   );
 };
