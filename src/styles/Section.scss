@@ -128,6 +128,13 @@
           }
         }
 
+        .number {
+          &:hover {
+            background-color: hsl(223, 64%, 98%);
+            cursor: default;
+          }
+        }
+
         .decrement {
           border-radius: 5px 0 0 5px;
         }
@@ -153,6 +160,7 @@
 
           &:hover {
             cursor: pointer;
+            background-color: hsl(26, 79%, 45%);
           }
 
           .btn-cart-svg {
