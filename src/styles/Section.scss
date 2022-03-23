@@ -9,11 +9,11 @@
   .left,
   .right {
     width: 90vh;
-    height: 80vh;
+    height: 70vh;
   }
 
   .left {
-    background-color: green;
+    // background-color: green;
 
     .product-display {
       height: 27em;
@@ -36,6 +36,15 @@
         width: auto;
         max-height: 100%;
         border-radius: 10px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .active {
+        border: 0.2em solid hsl(26, 100%, 55%);
+        opacity: 60%;
       }
     }
   }
