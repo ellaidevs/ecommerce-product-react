@@ -17,6 +17,7 @@
 
     .product-display {
       height: 27em;
+      cursor: pointer;
 
       img {
         width: auto;
@@ -45,18 +46,6 @@
       .active {
         border: 0.2em solid hsl(26, 100%, 55%);
         opacity: 60%;
-      }
-    }
-
-    //main product overlay view
-    .overlay-product-view {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: auto;
-
-      .icon-close-overlay {
-        fill: hsl(223, 64%, 98%);
       }
     }
   }
