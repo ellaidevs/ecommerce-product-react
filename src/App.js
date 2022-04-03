@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
-import "./App.scss";
-import Navbar from "./components/Navbar";
-import Section from "./components/Section";
-import Poc from "./components/Poc";
+import './App.scss'
+import Navbar from './components/Navbar'
+import Section from './components/Section'
+import Poc from './components/Poc'
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
       <Navbar />
       <Section />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
