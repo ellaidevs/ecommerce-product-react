@@ -8,7 +8,7 @@ var _sum = require('lodash/fp/sum') //cherry picked lodash/sum
 
 const RightSection = () => {
   let [counter, setCounter] = useState(0)
-  let [cart, setCart] = useState([])
+  let [cart, setCart] = useState([]) //* Need to use Redux to lift the state to Navbar level component(2 layers of component above).
 
   const fireCounter = (counterType) => {
     if (counterType === 'plus') {
