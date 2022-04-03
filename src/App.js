@@ -1,5 +1,5 @@
 import './App.scss'
-import Navbar from './components/Navbar'
+import NavBar from './components/NavBar'
 import Section from './components/Section'
 import Poc from './components/Poc'
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       {/* <Poc /> */}
-      <Navbar />
+      <NavBar />
       <Section />
     </div>
   )
