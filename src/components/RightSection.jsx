@@ -1,46 +1,44 @@
-import React, {useState} from "react";
-import { ReactComponent as IconCart } from "../assets/icon-cart.svg";
-import { ReactComponent as IconMinus } from "../assets/icon-minus.svg";
-import { ReactComponent as IconPlus } from "../assets/icon-plus.svg";
-import Swal from "../sweetalert";
-var at = require('lodash/at');
-var _sum = require('lodash/fp/sum');
+import React, { useState } from 'react'
+import { ReactComponent as IconCart } from '../assets/icon-cart.svg'
+import { ReactComponent as IconMinus } from '../assets/icon-minus.svg'
+import { ReactComponent as IconPlus } from '../assets/icon-plus.svg'
+import Swal from '../sweetalert'
+var at = require('lodash/at')
+var _sum = require('lodash/fp/sum') //cherry picked lodash/sum
 
 const RightSection = () => {
-  let [counter, setCounter] = useState(0);
-  let [cart, setCart] = useState([]);
+  let [counter, setCounter] = useState(0)
+  let [cart, setCart] = useState([])
 
   const fireCounter = (counterType) => {
-    if((counterType === "plus")){
+    if (counterType === 'plus') {
       setCounter(++counter)
-    }else if(counter > 0){
+    } else if (counter > 0) {
       setCounter(--counter)
     }
   }
 
   const addToCart = () => {
-    if(counter > 0){
+    if (counter > 0) {
       Swal.fire({
         position: 'center',
         icon: 'success',
         title: 'Added to cart',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
       })
-      setCart(cart = counter);
-      setCounter(counter = 0)
-    }else{
+      setCart(cart.concat(counter)) //* .push doesn't work for useState, using alternative .concat here
+      setCounter((counter = 0))
+    } else {
       Swal.fire({
         position: 'center',
         icon: 'warning',
         title: 'Please select product before adding to cart',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
       })
     }
   }
-
-
 
   return (
     <div className="right">
@@ -62,12 +60,12 @@ const RightSection = () => {
       </div>
       <div className="cart-container">
         <div className="counter">
-          <div className="decrement" onClick={()=> fireCounter('minus')} >
+          <div className="decrement" onClick={() => fireCounter('minus')}>
             <IconMinus />
           </div>
           <div className="number">{counter}</div>
-          <div className="increment" onClick={()=> fireCounter('plus')}>
-            <IconPlus   />
+          <div className="increment" onClick={() => fireCounter('plus')}>
+            <IconPlus />
           </div>
         </div>
         <div className="addToCartBtn">
@@ -78,7 +76,7 @@ const RightSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RightSection;
+export default RightSection
