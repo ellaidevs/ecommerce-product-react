@@ -6,7 +6,7 @@ import product3Thumbnail from '../assets/image-product-3-thumbnail.jpg'
 import product4Thumbnail from '../assets/image-product-4-thumbnail.jpg'
 import { ReactComponent as IconClose } from '../assets/icon-close.svg'
 
-const LeftSection = () => {
+const LeftSection = ({ setToggleOverlay }) => {
   let [currentProduct, setCurrentProduct] = useState('product-1')
 
   const image = require(`../assets/image-${currentProduct}.jpg`) //lazy load main display picture
@@ -20,6 +20,7 @@ const LeftSection = () => {
 
   const popProductSelection = (x) => {
     console.log('what is this', x)
+    setToggleOverlay((prevState) => !prevState)
   }
   return (
     <div className="left">
