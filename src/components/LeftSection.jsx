@@ -9,8 +9,11 @@ const LeftSection = () => {
   let [currentProduct, setCurrentProduct] = useState("product-1");
 
   const image = require(`../assets/image-${currentProduct}.jpg`); //lazy load main display picture
-  const mainProductImg = <img src={image} alt="main-product-display" />;
+  const mainProductImg = <img onClick={()=> popProductSelection(currentProduct)} src={image} alt="main-product-display" />;
 
+  const popProductSelection = (x) => {
+    console.log('what is this', x);
+  }
   return (
     <div className="left">
       <div className="product-display">{mainProductImg}</div>
