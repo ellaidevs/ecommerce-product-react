@@ -47,6 +47,18 @@
         opacity: 60%;
       }
     }
+
+    //main product overlay view
+    .overlay-product-view {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: auto;
+
+      .icon-close-overlay {
+        fill: hsl(223, 64%, 98%);
+      }
+    }
   }
 
   .right {
@@ -152,7 +164,7 @@
           height: 3em;
           border-radius: 5px;
           color: #fff;
-          font-family: "Kumbh Sans", sans-serif;
+          font-family: 'Kumbh Sans', sans-serif;
           font-weight: 700;
           display: flex;
           align-items: center;
