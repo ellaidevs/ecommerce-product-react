@@ -2,8 +2,20 @@ import React from "react";
 import { ReactComponent as IconCart } from "../assets/icon-cart.svg";
 import { ReactComponent as IconMinus } from "../assets/icon-minus.svg";
 import { ReactComponent as IconPlus } from "../assets/icon-plus.svg";
+import Swal from "../sweetalert";
 
 const RightSection = () => {
+
+  const addToCart = () => {
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Added to cart',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
+
   return (
     <div className="right">
       <h4>SNEAKER COMPANY</h4>
@@ -33,7 +45,7 @@ const RightSection = () => {
           </div>
         </div>
         <div className="addToCartBtn">
-          <button>
+          <button onClick={() => addToCart()}>
             <IconCart className="btn-cart-svg" />
             Add to cart
           </button>
