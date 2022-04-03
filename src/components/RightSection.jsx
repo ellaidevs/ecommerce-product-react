@@ -25,7 +25,7 @@ const RightSection = () => {
         icon: 'success',
         title: 'Added to cart',
         showConfirmButton: false,
-        timer: 1500,
+        timer: 2500,
       })
       setCart(cart.concat(counter)) //* .push doesn't work for useState, using alternative .concat here
       setCounter((counter = 0))
@@ -35,7 +35,7 @@ const RightSection = () => {
         icon: 'warning',
         title: 'Please select product before adding to cart',
         showConfirmButton: false,
-        timer: 1500,
+        timer: 2500,
       })
     }
   }
