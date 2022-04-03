@@ -3,11 +3,12 @@ import { ReactComponent as IconCart } from "../assets/icon-cart.svg";
 import { ReactComponent as IconMinus } from "../assets/icon-minus.svg";
 import { ReactComponent as IconPlus } from "../assets/icon-plus.svg";
 import Swal from "../sweetalert";
-
-
+var at = require('lodash/at');
+var _sum = require('lodash/fp/sum');
 
 const RightSection = () => {
   let [counter, setCounter] = useState(0);
+  let [cart, setCart] = useState([]);
 
   const fireCounter = (counterType) => {
     if((counterType === "plus")){
@@ -26,6 +27,8 @@ const RightSection = () => {
         showConfirmButton: false,
         timer: 1500
       })
+      setCart(cart = counter);
+      setCounter(counter = 0)
     }else{
       Swal.fire({
         position: 'center',
