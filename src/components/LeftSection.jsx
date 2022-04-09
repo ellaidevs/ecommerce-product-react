@@ -5,8 +5,15 @@ import product2Thumbnail from '../assets/image-product-2-thumbnail.jpg'
 import product3Thumbnail from '../assets/image-product-3-thumbnail.jpg'
 import product4Thumbnail from '../assets/image-product-4-thumbnail.jpg'
 import { ReactComponent as IconClose } from '../assets/icon-close.svg'
+import { ReactComponent as IconPrevious } from '../assets/icon-previous.svg'
+import { ReactComponent as IconNext } from '../assets/icon-next.svg'
 
-const LeftSection = ({ setToggleOverlay }) => {
+// TODO: 9th April 2022.
+// 1. Extract product-display elements as individual component.
+// 2. This product-display component will be used to display as overlay at root parent level.
+// 3. Add next and previous icon(doing now... 9th april)
+
+const LeftSection = ({ setToggleOverlay, setMainProduct }) => {
   let [currentProduct, setCurrentProduct] = useState('product-1')
 
   const image = require(`../assets/image-${currentProduct}.jpg`) //lazy load main display picture
@@ -19,12 +26,18 @@ const LeftSection = ({ setToggleOverlay }) => {
   )
 
   const popProductSelection = (x) => {
-    console.log('what is this', x)
+    // console.log('what is this', x)
     setToggleOverlay((prevState) => !prevState)
+    console.log('imagesss', image)
+    setMainProduct((prevState) => (prevState = image))
   }
   return (
     <div className="left">
-      <div className="product-display">{mainProductImg}</div>
+      <div className="product-display">
+        <IconPrevious />
+        {mainProductImg}
+        <IconNext />
+      </div>
       <div></div>
       <div className="thumnails">
         <img
@@ -51,12 +64,6 @@ const LeftSection = ({ setToggleOverlay }) => {
           alt="thumnail4"
           className={`${currentProduct == 'product-4' ? 'active' : ''}`}
         />
-      </div>
-
-      {/* Main display layover */}
-      <div className="overlay-product-view">
-        <IconClose className="icon-close-overlay" />
-        <div>Product overlay view</div>
       </div>
     </div>
   )
