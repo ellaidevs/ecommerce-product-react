@@ -8,7 +8,7 @@ import { ReactComponent as IconClose } from '../assets/icon-close.svg'
 import { ReactComponent as IconPrevious } from '../assets/icon-previous.svg'
 import { ReactComponent as IconNext } from '../assets/icon-next.svg'
 
-function DisplayProducts({ setToggleOverlay, setMainProduct }) {
+function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
   let [currentProduct, setCurrentProduct] = useState('product-1')
 
   const image = require(`../assets/image-${currentProduct}.jpg`) //lazy load main display picture
@@ -23,12 +23,14 @@ function DisplayProducts({ setToggleOverlay, setMainProduct }) {
   const popProductSelection = (x) => {
     // console.log('what is this', x)
     setToggleOverlay((prevState) => !prevState)
-    console.log('imagesss', image)
+    console.log('imagesssssxxxs', image)
+    console.log('isRoot', isRoot)
     setMainProduct((prevState) => (prevState = image))
   }
   return (
     <div>
       <div className="product-display">
+        {/* if isRoot is false, disable the previous and next icon */}
         <IconPrevious />
         {mainProductImg}
         <IconNext />

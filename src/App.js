@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 function App() {
   let [toggleOverlay, setToggleOverlay] = useState(false)
+  let [isRoot, setIsRoot] = useState(false)
   let [mainProduct, setMainProduct] = useState('')
 
   const handleOverlayToggle = () => {
@@ -22,6 +23,7 @@ function App() {
       <Section
         setToggleOverlay={setToggleOverlay}
         setMainProduct={setMainProduct}
+        isRoot={isRoot}
       />
     </div>
   )

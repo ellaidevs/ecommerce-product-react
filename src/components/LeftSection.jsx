@@ -6,12 +6,13 @@ import DisplayProducts from './DisplayProducts'
 // 2. This product-display component will be used to display as overlay at root parent level.
 // 3. Add next and previous icon(doing now... 9th april)
 
-const LeftSection = ({ setToggleOverlay, setMainProduct }) => {
+const LeftSection = ({ setToggleOverlay, setMainProduct, isRoot }) => {
   return (
     <div className="left">
       <DisplayProducts
         setToggleOverlay={setToggleOverlay}
         setMainProduct={setMainProduct}
+        isRoot={isRoot}
       />
     </div>
   )
