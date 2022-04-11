@@ -1,7 +1,9 @@
 .left {
-  // background-color: green;
   .icon-close {
     fill: hsl(223, 64%, 98%);
+    position: sticky;
+    margin-top: 5rem;
+    margin-left: 26rem;
   }
 
   .product-display {
@@ -17,9 +19,16 @@
       padding-left: 10px;
       border-radius: 50%;
 
-      position: absolute;
-      top: 30%;
-      margin-left: -17px;
+      position: relative;
+      top: -40%;
+    }
+
+    .icon-next {
+      margin-left: -1rem;
+    }
+
+    .icon-previous {
+      margin-right: -1rem;
     }
 
     img {
