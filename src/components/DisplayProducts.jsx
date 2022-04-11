@@ -29,11 +29,12 @@ function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
   }
   return (
     <div>
+      {isRoot && <IconClose />}
       <div className="product-display">
         {/* if isRoot is false, disable the previous and next icon */}
-        <IconPrevious />
+        {isRoot && <IconPrevious />}
         {mainProductImg}
-        <IconNext />
+        {isRoot && <IconNext />}
       </div>
       <div></div>
       <div className="thumnails">
