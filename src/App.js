@@ -3,6 +3,7 @@ import NavBar from './components/NavBar'
 import Section from './components/Section'
 import Poc from './components/Poc'
 import { useState } from 'react'
+import DisplayProducts from './components/DisplayProducts'
 
 function App() {
   let [toggleOverlay, setToggleOverlay] = useState(false)
@@ -16,9 +17,12 @@ function App() {
     <div className="App">
       {toggleOverlay && (
         <div className="overlay" onClick={handleOverlayToggle}>
-          This is where
+          <div className="left">
+            <DisplayProducts isRoot={true} />
+          </div>
         </div>
       )}
+
       <NavBar />
       <Section
         setToggleOverlay={setToggleOverlay}
