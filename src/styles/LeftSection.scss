@@ -5,6 +5,16 @@
     height: 27em;
     cursor: pointer;
 
+    .icon-next,
+    .icon-previous {
+      background-color: hsl(223, 64%, 98%);
+      width: 1.5rem;
+      height: 1.5rem;
+      padding-top: 5px;
+      padding-left: 10px;
+      border-radius: 50%;
+    }
+
     img {
       width: auto;
       max-height: 100%;
