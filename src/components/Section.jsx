@@ -2,14 +2,10 @@ import React from 'react'
 import LeftSection from './LeftSection'
 import RightSection from './RightSection'
 
-const Section = ({ setToggleOverlay, setMainProduct, isRoot }) => {
+const Section = ({ setToggleOverlay, isRoot }) => {
   return (
     <div className="section">
-      <LeftSection
-        setToggleOverlay={setToggleOverlay}
-        // setMainProduct={setMainProduct}
-        isRoot={isRoot}
-      />
+      <LeftSection setToggleOverlay={setToggleOverlay} isRoot={isRoot} />
       <RightSection />
     </div>
   )

@@ -7,7 +7,6 @@ import DisplayProducts from './components/DisplayProducts'
 
 function App() {
   let [toggleOverlay, setToggleOverlay] = useState(false)
-  let [isRoot, setIsRoot] = useState(false)
 
   return (
     <div className="App">
@@ -23,7 +22,7 @@ function App() {
       )}
 
       <NavBar />
-      <Section setToggleOverlay={setToggleOverlay} isRoot={isRoot} />
+      <Section setToggleOverlay={setToggleOverlay} isRoot={false} />
     </div>
   )
 }
