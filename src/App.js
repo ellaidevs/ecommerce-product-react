@@ -1,7 +1,6 @@
 import './App.scss'
 import NavBar from './components/NavBar'
 import Section from './components/Section'
-import Poc from './components/Poc'
 import { useState } from 'react'
 import DisplayProducts from './components/DisplayProducts'
 
