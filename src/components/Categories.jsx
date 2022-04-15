@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Categories = () => {
   return (
@@ -9,7 +9,7 @@ const Categories = () => {
       <h3>About</h3>
       <h3>Contact</h3>
     </div>
-  );
-};
+  )
+}
 
-export default Categories;
+export default Categories

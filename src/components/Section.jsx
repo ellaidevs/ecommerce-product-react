@@ -1,11 +1,14 @@
-import React from 'react';
+import React from 'react'
+import LeftSection from './LeftSection'
+import RightSection from './RightSection'
 
-const Section = () => {
-    return (
-        <div className="section">
-            This is section
-        </div>
-    );
-};
+const Section = ({ setToggleOverlay, isRoot }) => {
+  return (
+    <div className="section">
+      <LeftSection setToggleOverlay={setToggleOverlay} isRoot={isRoot} />
+      <RightSection />
+    </div>
+  )
+}
 
-export default Section;
+export default Section
