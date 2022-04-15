@@ -33,7 +33,7 @@ function DisplayProducts({ setToggleOverlay, isRoot }) {
 
   useEffect(() => {
     setCurrentProduct(`product-${imgCounter}`)
-  }) //? No clean up for useEffect is needed since we are not fetching any api that can cause infinite loop
+  }, [imgCounter])
 
   const getNextPic = () => {
     if (imgCounter < 4) setImgCounter((prevState) => ++prevState)
@@ -63,25 +63,25 @@ function DisplayProducts({ setToggleOverlay, isRoot }) {
           onClick={() => setImgCounter(1)}
           src={product1Thumbnail}
           alt="thumnail1"
-          className={`${currentProduct == 'product-1' ? 'active' : ''}`}
+          className={`${currentProduct === 'product-1' ? 'active' : ''}`}
         />
         <img
           onClick={() => setImgCounter(2)}
           src={product2Thumbnail}
           alt="thumnail2"
-          className={`${currentProduct == 'product-2' ? 'active' : ''}`}
+          className={`${currentProduct === 'product-2' ? 'active' : ''}`}
         />
         <img
           onClick={() => setImgCounter(3)}
           src={product3Thumbnail}
           alt="thumnail3"
-          className={`${currentProduct == 'product-3' ? 'active' : ''}`}
+          className={`${currentProduct === 'product-3' ? 'active' : ''}`}
         />
         <img
           onClick={() => setImgCounter(4)}
           src={product4Thumbnail}
           alt="thumnail4"
-          className={`${currentProduct == 'product-4' ? 'active' : ''}`}
+          className={`${currentProduct === 'product-4' ? 'active' : ''}`}
         />
       </div>
     </div>

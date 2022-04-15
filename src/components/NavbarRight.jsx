@@ -1,6 +1,6 @@
-import React from "react";
-import { ReactComponent as IconCart } from "../assets/icon-cart.svg";
-import Avatar from "../assets/image-avatar.png";
+import React from 'react'
+import { ReactComponent as IconCart } from '../assets/icon-cart.svg'
+import Avatar from '../assets/image-avatar.png'
 
 const NavbarRight = () => {
   return (
@@ -9,10 +9,10 @@ const NavbarRight = () => {
         <IconCart className="icon-cart" />
       </div>
       <div className="avatar">
-        <img src={Avatar} alt="profile-picture" />
+        <img src={Avatar} alt="profile" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NavbarRight;
+export default NavbarRight
