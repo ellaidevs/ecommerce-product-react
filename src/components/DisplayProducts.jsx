@@ -33,10 +33,6 @@ function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
     setToggleOverlay((prevState) => !prevState)
   }
 
-  const getPreviousPic = (x) => {
-    setCurrentProduct(`product-2`)
-  }
-
   useEffect(() => {
     setCurrentProduct(`product-${imgCounter}`)
   }) //? No clean up for useEffect is needed since we are not fetching any api that can cause infinite loop
@@ -45,21 +41,19 @@ function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
     if (imgCounter < 4) setImgCounter((prevState) => ++prevState)
   }
 
+  const getPreviousPic = () => {
+    if (imgCounter > 1) setImgCounter((prevState) => --prevState)
+  }
+
   return (
     <div>
       {isRoot ? (
         <div className="display-root">
           <IconClose onClick={closeOverlay} className="icon-close" />
           <div className="product-display">
-            <IconPrevious
-              className="icon-previous"
-              onClick={() => getPreviousPic('ohno')}
-            />
+            <IconPrevious className="icon-previous" onClick={getPreviousPic} />
             {mainProductImg}
-            <IconNext
-              className="icon-next"
-              onClick={() => getNextPic('ohno')}
-            />
+            <IconNext className="icon-next" onClick={getNextPic} />
           </div>
         </div>
       ) : (
@@ -68,25 +62,25 @@ function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
 
       <div className="thumnails">
         <img
-          onClick={() => setCurrentProduct('product-1')}
+          onClick={() => setImgCounter(1)}
           src={product1Thumbnail}
           alt="thumnail1"
           className={`${currentProduct == 'product-1' ? 'active' : ''}`}
         />
         <img
-          onClick={() => setCurrentProduct('product-2')}
+          onClick={() => setImgCounter(2)}
           src={product2Thumbnail}
           alt="thumnail2"
           className={`${currentProduct == 'product-2' ? 'active' : ''}`}
         />
         <img
-          onClick={() => setCurrentProduct('product-3')}
+          onClick={() => setImgCounter(3)}
           src={product3Thumbnail}
           alt="thumnail3"
           className={`${currentProduct == 'product-3' ? 'active' : ''}`}
         />
         <img
-          onClick={() => setCurrentProduct('product-4')}
+          onClick={() => setImgCounter(4)}
           src={product4Thumbnail}
           alt="thumnail4"
           className={`${currentProduct == 'product-4' ? 'active' : ''}`}
