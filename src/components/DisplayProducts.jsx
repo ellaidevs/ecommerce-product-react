@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import product1Thumbnail from '../assets/image-product-1-thumbnail.jpg'
 import product2Thumbnail from '../assets/image-product-2-thumbnail.jpg'
@@ -37,10 +37,12 @@ function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
     setCurrentProduct(`product-2`)
   }
 
+  useEffect(() => {
+    setCurrentProduct(`product-${imgCounter}`)
+  }) //? No clean up for useEffect is needed since we are not fetching any api that can cause infinite loop
+
   const getNextPic = () => {
     if (imgCounter < 4) setImgCounter((prevState) => ++prevState)
-    setCurrentProduct(`product-${imgCounter}`)
-    console.log('executing')
   }
 
   return (
