@@ -20,18 +20,20 @@ function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
     />
   )
 
-  const popProductSelection = (x) => {
-    // console.log('what is this', x)
+  const popProductSelection = () => {
     setToggleOverlay((prevState) => !prevState)
-    console.log('imagesssssxxxs', image)
-    console.log('isRoot', isRoot)
     setMainProduct((prevState) => (prevState = image))
   }
+
+  const closeOverlay = () => {
+    setToggleOverlay((prevState) => !prevState)
+  }
+
   return (
     <div>
       {isRoot ? (
         <div className="display-root">
-          <IconClose className="icon-close" />
+          <IconClose onClick={closeOverlay} className="icon-close" />
           <div className="product-display">
             <IconPrevious className="icon-previous" />
             {mainProductImg}
