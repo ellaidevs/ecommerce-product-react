@@ -11,14 +11,17 @@ function App() {
   let [mainProduct, setMainProduct] = useState('')
 
   const openOverlay = () => {
-    setToggleOverlay((toggleOverlay = true))
+    // setToggleOverlay((toggleOverlay = true))
   }
   return (
     <div className="App">
       {toggleOverlay && (
         <div className="overlay" onClick={openOverlay}>
           <div className="left">
-            <DisplayProducts isRoot={true} />
+            <DisplayProducts
+              isRoot={true}
+              setToggleOverlay={setToggleOverlay}
+            />
           </div>
         </div>
       )}
