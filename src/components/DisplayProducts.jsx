@@ -33,7 +33,7 @@ function DisplayProducts({ setToggleOverlay, isRoot }) {
 
   useEffect(() => {
     setCurrentProduct(`product-${imgCounter}`)
-  }) //? No clean up for useEffect is needed since we are not fetching any api that can cause infinite loop
+  }, [imgCounter])
 
   const getNextPic = () => {
     if (imgCounter < 4) setImgCounter((prevState) => ++prevState)
