@@ -21,7 +21,10 @@ function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
   )
 
   const popProductSelection = () => {
-    setToggleOverlay((prevState) => !prevState)
+    if (!isRoot) {
+      setToggleOverlay((prevState) => !prevState)
+    }
+
     setMainProduct((prevState) => (prevState = image))
   }
 

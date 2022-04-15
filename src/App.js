@@ -21,6 +21,7 @@ function App() {
             <DisplayProducts
               isRoot={true}
               setToggleOverlay={setToggleOverlay}
+              setMainProduct={setMainProduct}
             />
           </div>
         </div>
