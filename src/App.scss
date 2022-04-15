@@ -1,14 +1,27 @@
-@import "styles/Navbar.scss";
+@import 'styles/Navbar.scss', 'styles/Section.scss', 'styles/LeftSection.scss',
+  'styles/RightSection.scss';
 
 body {
   background-color: hsl(0, 0%, 100%);
+  // overflow: hidden;
 }
 
 .App {
   text-align: center;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
-.section {
-  height: 100vh;
+.overlay {
+  position: absolute;
+  background-color: rgba(6, 1, 1, 0.735);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+//mobile view
+@media (max-width: 810px) {
+  .nav-title {
+    color: red;
+  }
 }

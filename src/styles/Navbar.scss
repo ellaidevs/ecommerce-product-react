@@ -2,6 +2,11 @@
   height: 4.5em;
   position: relative;
 
+  hr {
+    margin: 0 2em;
+    opacity: 0.2;
+  }
+
   .container {
     display: flex;
     gap: 4.5em;
@@ -36,12 +41,20 @@
 
     .svg-cart {
       svg {
-        color: red;
+        fill: hsl(219, 9%, 45%);
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
     .avatar {
       height: 3em;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     img {

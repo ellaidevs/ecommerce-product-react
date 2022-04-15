@@ -2,7 +2,7 @@ import React from "react";
 import Categories from "./Categories";
 import NavbarRight from "./NavbarRight";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <div className="nav">
       <div className="container">
@@ -10,8 +10,9 @@ const Navbar = () => {
         <Categories />
         <NavbarRight />
       </div>
+      <hr />
     </div>
   );
 };
 
-export default Navbar;
+export default NavBar;
