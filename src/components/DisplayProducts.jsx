@@ -8,7 +8,7 @@ import { ReactComponent as IconClose } from '../assets/icon-close.svg'
 import { ReactComponent as IconPrevious } from '../assets/icon-previous.svg'
 import { ReactComponent as IconNext } from '../assets/icon-next.svg'
 
-function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
+function DisplayProducts({ setToggleOverlay, isRoot }) {
   let [imgCounter, setImgCounter] = useState(1)
   let [currentProduct, setCurrentProduct] = useState(`product-${imgCounter}`)
 
@@ -25,8 +25,6 @@ function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
     if (!isRoot) {
       setToggleOverlay((prevState) => !prevState)
     }
-
-    setMainProduct((prevState) => (prevState = image))
   }
 
   const closeOverlay = () => {

@@ -8,31 +8,22 @@ import DisplayProducts from './components/DisplayProducts'
 function App() {
   let [toggleOverlay, setToggleOverlay] = useState(false)
   let [isRoot, setIsRoot] = useState(false)
-  let [mainProduct, setMainProduct] = useState('')
 
-  const openOverlay = () => {
-    // setToggleOverlay((toggleOverlay = true))
-  }
   return (
     <div className="App">
       {toggleOverlay && (
-        <div className="overlay" onClick={openOverlay}>
+        <div className="overlay">
           <div className="left">
             <DisplayProducts
               isRoot={true}
               setToggleOverlay={setToggleOverlay}
-              setMainProduct={setMainProduct}
             />
           </div>
         </div>
       )}
 
       <NavBar />
-      <Section
-        setToggleOverlay={setToggleOverlay}
-        setMainProduct={setMainProduct}
-        isRoot={isRoot}
-      />
+      <Section setToggleOverlay={setToggleOverlay} isRoot={isRoot} />
     </div>
   )
 }

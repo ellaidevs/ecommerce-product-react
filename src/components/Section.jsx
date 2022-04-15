@@ -7,7 +7,7 @@ const Section = ({ setToggleOverlay, setMainProduct, isRoot }) => {
     <div className="section">
       <LeftSection
         setToggleOverlay={setToggleOverlay}
-        setMainProduct={setMainProduct}
+        // setMainProduct={setMainProduct}
         isRoot={isRoot}
       />
       <RightSection />
