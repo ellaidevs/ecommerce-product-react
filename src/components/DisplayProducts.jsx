@@ -9,7 +9,8 @@ import { ReactComponent as IconPrevious } from '../assets/icon-previous.svg'
 import { ReactComponent as IconNext } from '../assets/icon-next.svg'
 
 function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
-  let [currentProduct, setCurrentProduct] = useState('product-1')
+  let [imgCounter, setImgCounter] = useState(1)
+  let [currentProduct, setCurrentProduct] = useState(`product-${imgCounter}`)
 
   const image = require(`../assets/image-${currentProduct}.jpg`) //lazy load main display picture
   const mainProductImg = (
@@ -32,15 +33,31 @@ function DisplayProducts({ setToggleOverlay, setMainProduct, isRoot }) {
     setToggleOverlay((prevState) => !prevState)
   }
 
+  const getPreviousPic = (x) => {
+    setCurrentProduct(`product-2`)
+  }
+
+  const getNextPic = () => {
+    if (imgCounter < 4) setImgCounter((prevState) => ++prevState)
+    setCurrentProduct(`product-${imgCounter}`)
+    console.log('executing')
+  }
+
   return (
     <div>
       {isRoot ? (
         <div className="display-root">
           <IconClose onClick={closeOverlay} className="icon-close" />
           <div className="product-display">
-            <IconPrevious className="icon-previous" />
+            <IconPrevious
+              className="icon-previous"
+              onClick={() => getPreviousPic('ohno')}
+            />
             {mainProductImg}
-            <IconNext className="icon-next" />
+            <IconNext
+              className="icon-next"
+              onClick={() => getNextPic('ohno')}
+            />
           </div>
         </div>
       ) : (
