@@ -6,10 +6,10 @@ import Swal from '../sweetalert'
 var at = require('lodash/at')
 var _sum = require('lodash/fp/sum')
 
-const RightSection = () => {
+const RightSection = ({ setSumOfCart }) => {
   let [counter, setCounter] = useState(0)
   let [cart, setCart] = useState([])
-  let [sumOfCart, setSumOfCart] = useState(0)
+  // let [sumOfCart, setSumOfCart] = useState(0)
 
   const fireCounter = (counterType) => {
     if (counterType === 'plus') {
@@ -42,8 +42,9 @@ const RightSection = () => {
   }
 
   useEffect(() => {
-    setSumOfCart((sumOfCart = _sum(cart))) //! Note: will use useRef in future development after studying useRef.
-    console.log('sumOfCart', sumOfCart)
+    // setSumOfCart((sumOfCart = _sum(cart))) //! Note: will use useRef in future development after studying useRef.
+    // console.log('sumOfCart', sumOfCart)
+    setSumOfCart((prevState) => (prevState = _sum(cart)))
   }, [cart])
 
   return (
