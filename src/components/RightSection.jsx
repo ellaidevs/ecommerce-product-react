@@ -6,7 +6,7 @@ import Swal from '../sweetalert'
 
 const RightSection = () => {
   let [counter, setCounter] = useState(0)
-  let [cart, setCart] = useState([]) //* Need to use Redux to lift the state to Navbar level component(2 layers of component above).
+  let [cart, setCart] = useState([])
 
   const fireCounter = (counterType) => {
     if (counterType === 'plus') {
@@ -39,7 +39,7 @@ const RightSection = () => {
   }
 
   useEffect(() => {
-    console.log('cart', cart)
+    console.log('cart', cart) //! Note: this useEffect is to be replaced with useRef in future development.
   }, [cart])
 
   return (
