@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ReactComponent as IconCart } from '../assets/icon-cart.svg'
 import { ReactComponent as IconMinus } from '../assets/icon-minus.svg'
 import { ReactComponent as IconPlus } from '../assets/icon-plus.svg'
@@ -25,8 +25,7 @@ const RightSection = () => {
         showConfirmButton: false,
         timer: 2500,
       })
-      setCart(cart.concat(counter)) //* .push doesn't work for useState, using alternative .concat here
-      setCounter((counter = 0))
+      setCart(cart.concat(counter))
     } else {
       Swal.fire({
         position: 'center',
@@ -36,7 +35,12 @@ const RightSection = () => {
         timer: 2500,
       })
     }
+    setCounter((counter = 0))
   }
+
+  useEffect(() => {
+    console.log('cart', cart)
+  }, [cart])
 
   return (
     <div className="right">
