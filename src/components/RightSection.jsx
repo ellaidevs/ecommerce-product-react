@@ -42,7 +42,8 @@ const RightSection = () => {
   }
 
   useEffect(() => {
-    console.log('cart', cart) //! Note: this useEffect is to be replaced with useRef in future development.
+    setSumOfCart((sumOfCart = _sum(cart))) //! Note: will use useRef in future development after studying useRef.
+    console.log('sumOfCart', sumOfCart)
   }, [cart])
 
   return (
