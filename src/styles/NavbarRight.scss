@@ -1,0 +1,41 @@
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  width: 100vh;
+  justify-content: flex-end;
+
+  .svg-cart {
+    svg {
+      fill: hsl(219, 9%, 45%);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cart-value {
+    position: absolute;
+    margin: -20px 0 0 20px;
+    background-color: hsl(26, 100%, 55%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50% 50% 50% 0;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .avatar {
+    height: 3em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: auto;
+    max-height: 100%;
+  }
+}
