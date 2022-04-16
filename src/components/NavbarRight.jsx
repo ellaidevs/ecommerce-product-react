@@ -16,7 +16,13 @@ const NavbarRight = ({ sumOfCart }) => {
       <div className="svg-cart">
         {cartValue > 0 && <div className="cart-value">{cartValue}</div>}
         <IconCart onClick={showAddToCart} className="icon-cart" />
-        {toggleCart && <div className="cart-card">Show card</div>}
+        {toggleCart && (
+          <div className="cart-card">
+            <h4 className="cart-card-title">Add to Cart</h4>
+            <hr />
+            <div>cart content</div>
+          </div>
+        )}
       </div>
       <div className="avatar">
         <img src={Avatar} alt="profile" />
