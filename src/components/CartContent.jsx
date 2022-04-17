@@ -2,7 +2,7 @@ import React from 'react'
 import { ReactComponent as IconDelete } from '../assets/icon-delete.svg'
 import product1Thumbnail from '../assets/image-product-1-thumbnail.jpg'
 
-function CartContent({ toggleCart }) {
+function CartContent({ toggleCart, cartValue }) {
   return (
     <div>
       {toggleCart && (
@@ -15,7 +15,7 @@ function CartContent({ toggleCart }) {
             <div className="cart-product-details">
               <p>Fall Limited Edition Sneakers</p>
               <p className="cart-product-price">
-                $125.00 x 3 <b>$375.00</b>
+                $125.00 x {cartValue} <b>${125 * cartValue}.00</b>
               </p>
             </div>
             <IconDelete className="icon-delete" />

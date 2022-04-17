@@ -15,7 +15,7 @@ function AddToCart({ sumOfCart }) {
     <div className="svg-cart">
       {cartValue > 0 && <div className="cart-value">{cartValue}</div>}
       <IconCart onClick={showAddToCart} className="icon-cart" />
-      <CartContent toggleCart={toggleCart} />
+      <CartContent cartValue={cartValue} toggleCart={toggleCart} />
     </div>
   )
 }
