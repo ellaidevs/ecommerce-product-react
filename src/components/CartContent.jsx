@@ -45,7 +45,7 @@ function CartContent({ toggleCart, cartValue }) {
       </div>
     )
   } else {
-    cartContent = <div className="content">Cart is empty</div>
+    cartContent = <div className="content cart-empty">Your cart is empty</div>
   }
 
   return (
