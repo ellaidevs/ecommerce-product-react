@@ -1,11 +1,28 @@
 import React, { useState } from 'react'
 import { ReactComponent as IconDelete } from '../assets/icon-delete.svg'
 import product1Thumbnail from '../assets/image-product-1-thumbnail.jpg'
+import Swal from '../sweetalert'
 
 function CartContent({ toggleCart, cartValue }) {
   let [toggleContent, setToggleContent] = useState(true)
+
   const clearCart = () => {
-    setToggleContent(false)
+    Swal.fire({
+      title: 'Do you want to clear your cart?',
+      icon: 'question',
+      showDenyButton: true,
+      confirmButtonText: 'Yes, clear the cart',
+      denyButtonText: `No`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Cart have been cleared!',
+          icon: 'success',
+          showConfirmButton: false,
+        })
+        setToggleContent(false)
+      }
+    })
   }
 
   let cartContent
