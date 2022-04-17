@@ -18,9 +18,8 @@ const NavbarRight = ({ sumOfCart }) => {
         <IconCart onClick={showAddToCart} className="icon-cart" />
         {toggleCart && (
           <div className="cart-card">
-            <h4 className="cart-card-title">Add to Cart</h4>
-            <hr />
-            <div>cart content</div>
+            <h4 className="cart-card-title">Cart</h4>
+            <div className="cart-content">cart content</div>
           </div>
         )}
       </div>
