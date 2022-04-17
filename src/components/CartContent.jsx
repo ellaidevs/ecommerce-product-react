@@ -1,4 +1,6 @@
 import React from 'react'
+import { ReactComponent as IconDelete } from '../assets/icon-delete.svg'
+import product1Thumbnail from '../assets/image-product-1-thumbnail.jpg'
 
 function CartContent({ toggleCart }) {
   return (
@@ -7,11 +9,14 @@ function CartContent({ toggleCart }) {
         <div className="cart-card">
           <h4 className="cart-card-title">Cart</h4>
           <div className="cart-content">
-            <img src="" alt="product" />
+            <div className="cart-product-img">
+              <img src={product1Thumbnail} alt="product" />
+            </div>
             <div className="cart-product-details">
               <p>Fall Limited Edition Sneakers</p>
               <p>$125.00 x 3</p>
             </div>
+            <IconDelete />
           </div>
           <button className="btn-checkout">Checkout</button>
         </div>

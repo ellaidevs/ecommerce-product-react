@@ -47,6 +47,19 @@
 
     .cart-content {
       border-top: 1.3px solid rgb(220, 215, 215);
+      display: flex;
+      padding: 1rem;
+
+      .cart-product-img {
+        width: 3rem;
+        height: 3rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
     }
   }
 
