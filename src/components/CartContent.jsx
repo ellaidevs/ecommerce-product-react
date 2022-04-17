@@ -18,7 +18,7 @@ function CartContent({ toggleCart }) {
                 $125.00 x 3 <b>$375.00</b>
               </p>
             </div>
-            <IconDelete />
+            <IconDelete className="icon-delete" />
           </div>
           <button className="btn-checkout">Checkout</button>
         </div>
