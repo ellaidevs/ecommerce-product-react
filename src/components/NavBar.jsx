@@ -1,17 +1,18 @@
-import React from "react";
-import Categories from "./Categories";
-import NavbarRight from "./NavbarRight";
+import React from 'react'
+import Categories from './Categories'
+import NavbarRight from './NavbarRight'
 
-const Navbar = () => {
+const NavBar = (sumOfCart) => {
   return (
     <div className="nav">
       <div className="container">
         <h1 className="nav-title">sneakers</h1>
         <Categories />
-        <NavbarRight />
+        <NavbarRight sumOfCart={sumOfCart} />
       </div>
+      <hr />
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default NavBar
