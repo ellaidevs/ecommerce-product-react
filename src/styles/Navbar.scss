@@ -31,35 +31,4 @@
       color: hsl(26, 100%, 55%);
     }
   }
-
-  .navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 2em;
-    width: 100vh;
-    justify-content: flex-end;
-
-    .svg-cart {
-      svg {
-        fill: hsl(219, 9%, 45%);
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
-
-    .avatar {
-      height: 3em;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    img {
-      width: auto;
-      max-height: 100%;
-    }
-  }
 }

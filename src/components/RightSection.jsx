@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ReactComponent as IconCart } from '../assets/icon-cart.svg'
 import { ReactComponent as IconMinus } from '../assets/icon-minus.svg'
 import { ReactComponent as IconPlus } from '../assets/icon-plus.svg'
 import Swal from '../sweetalert'
+var at = require('lodash/at')
+var _sum = require('lodash/fp/sum')
 
-const RightSection = () => {
+const RightSection = ({ setSumOfCart }) => {
   let [counter, setCounter] = useState(0)
-  let [cart, setCart] = useState([]) //* Need to use Redux to lift the state to Navbar level component(2 layers of component above).
+  let [cart, setCart] = useState([])
+  // let [sumOfCart, setSumOfCart] = useState(0)
 
   const fireCounter = (counterType) => {
     if (counterType === 'plus') {
@@ -25,8 +28,7 @@ const RightSection = () => {
         showConfirmButton: false,
         timer: 2500,
       })
-      setCart(cart.concat(counter)) //* .push doesn't work for useState, using alternative .concat here
-      setCounter((counter = 0))
+      setCart(cart.concat(counter))
     } else {
       Swal.fire({
         position: 'center',
@@ -36,7 +38,14 @@ const RightSection = () => {
         timer: 2500,
       })
     }
+    setCounter((counter = 0))
   }
+
+  useEffect(() => {
+    // setSumOfCart((sumOfCart = _sum(cart))) //! Note: will use useRef in future development after studying useRef.
+    // console.log('sumOfCart', sumOfCart)
+    setSumOfCart((prevState) => (prevState = _sum(cart)))
+  }, [cart])
 
   return (
     <div className="right">

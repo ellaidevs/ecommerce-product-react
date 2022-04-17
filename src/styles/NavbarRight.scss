@@ -1,0 +1,118 @@
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  width: 100vh;
+  justify-content: flex-end;
+  margin-right: 6rem;
+
+  .svg-cart {
+    svg {
+      fill: hsl(219, 9%, 45%);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cart-value {
+    position: absolute;
+    margin: -20px 0 0 20px;
+    background-color: hsl(26, 100%, 55%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50% 50% 50% 0;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .cart-card {
+    position: absolute;
+    width: 21rem;
+    min-height: 13.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    right: 1%;
+    z-index: 1;
+    margin-top: 1rem;
+
+    -webkit-box-shadow: 0px 10px 25px -11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 25px -11px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 25px -11px rgba(0, 0, 0, 0.75);
+
+    .cart-card-title {
+      display: flex;
+      margin-left: 1.5rem;
+    }
+
+    .content {
+      border-top: 1.3px solid rgb(220, 215, 215);
+      .cart-content {
+        display: flex;
+
+        .cart-product-img {
+          width: 3rem;
+          height: 3rem;
+          padding: 1rem;
+
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+
+        .cart-product-details {
+          text-align: left;
+
+          p:nth-child(1) {
+            margin-bottom: 0;
+          }
+
+          p:nth-child(2) {
+            margin-top: 0.5rem;
+          }
+        }
+
+        .icon-delete {
+          position: absolute;
+          left: 90%;
+          bottom: 45%;
+        }
+      }
+
+      .btn-checkout {
+        position: relative;
+        margin-top: 10px;
+        height: 3.2rem;
+        width: 20rem;
+        background-color: hsl(26, 100%, 55%);
+        color: #fff;
+        font-weight: bold;
+        font-size: 0.9rem;
+        border-radius: 5px;
+        border: none;
+      }
+    }
+
+    .cart-empty {
+      padding-top: 3rem;
+      font-weight: bold;
+      color: rgb(106, 104, 104);
+    }
+  }
+
+  .avatar {
+    height: 3em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: auto;
+    max-height: 100%;
+  }
+}
