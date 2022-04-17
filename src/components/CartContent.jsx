@@ -14,7 +14,9 @@ function CartContent({ toggleCart }) {
             </div>
             <div className="cart-product-details">
               <p>Fall Limited Edition Sneakers</p>
-              <p>$125.00 x 3</p>
+              <p className="cart-product-price">
+                $125.00 x 3 <b>$375.00</b>
+              </p>
             </div>
             <IconDelete />
           </div>
