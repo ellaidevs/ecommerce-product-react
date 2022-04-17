@@ -26,7 +26,7 @@ function CartContent({ toggleCart, cartValue }) {
   }
 
   let cartContent
-  if (toggleContent) {
+  if (toggleContent && cartValue > 0) {
     cartContent = (
       <div className="content">
         <div className="cart-content">
