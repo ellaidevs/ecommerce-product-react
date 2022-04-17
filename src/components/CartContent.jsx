@@ -27,7 +27,6 @@ function CartContent({ toggleCart, cartValue }) {
 
   let cartContent
   if (toggleContent) {
-    console.log('trueee')
     cartContent = (
       <div className="content">
         <div className="cart-content">
@@ -46,9 +45,9 @@ function CartContent({ toggleCart, cartValue }) {
       </div>
     )
   } else {
-    console.log('falsee')
     cartContent = <div className="content">Cart is empty</div>
   }
+
   return (
     <div>
       {toggleCart && (
