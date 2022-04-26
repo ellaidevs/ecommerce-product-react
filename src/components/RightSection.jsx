@@ -46,6 +46,8 @@ const RightSection = ({ setSumOfCart }) => {
     setSumOfCart((prevState) => (prevState = _sum(cart)))
   }, [cart, setSumOfCart])
 
+  const { count } = useSelector((state) => state.counter)
+
   return (
     <div className="right">
       <h4>SNEAKER COMPANY</h4>
@@ -69,7 +71,7 @@ const RightSection = ({ setSumOfCart }) => {
           <div className="decrement" onClick={() => fireCounter('minus')}>
             <IconMinus />
           </div>
-          <div className="number">{counter}</div>
+          <div className="number">{count}</div>
           <div className="increment" onClick={() => fireCounter('plus')}>
             <IconPlus />
           </div>
