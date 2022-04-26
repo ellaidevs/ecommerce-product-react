@@ -12,7 +12,7 @@ Ongoing project
 3. Integrate with AWS S3 
 4. View multiple ecommerce products with data from AWS S3 which will be scraped using Puppeteer.js(Automation/testing tool). 
 
-### Live Site
+### Live Site & continous deplayment from branch(staging)
 https://ellai-ecommerce.netlify.app/
 
 ### Host
@@ -21,7 +21,7 @@ This project have been hosted with https://www.netlify.com/
 
 ### Deployment
 
-Deployment have been confiqured to perform continuous deployment from staging(git branch)
+Deployment have been confiqured to perform continuous deployment from staging(git branch) using netlify
 
 
 ## Available Scripts
