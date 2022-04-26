@@ -1,6 +1,16 @@
 # Documentation
 
-Ongoing project last updated: 26 April 2022
+### Project status
+Ongoing project
+
+## Last updated
+26 April 2022 
+
+## Upcoming features and enhancement
+1. Mobile responsible using grid css
+2. Night mode and light mode toggle for mobile & desktop version
+3. Integrate with AWS S3 
+4. View multiple ecommerce products with data from AWS S3 which will be scraped using Puppeteer.js(Automation/testing tool). 
 
 ### Live Site
 https://ellai-ecommerce.netlify.app/
