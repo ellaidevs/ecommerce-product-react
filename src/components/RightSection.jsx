@@ -2,25 +2,29 @@ import React, { useState, useEffect } from 'react'
 import { ReactComponent as IconCart } from '../assets/icon-cart.svg'
 import { ReactComponent as IconMinus } from '../assets/icon-minus.svg'
 import { ReactComponent as IconPlus } from '../assets/icon-plus.svg'
-import Swal from '../sweetalert'
 import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement } from '../redux/counter'
+import { increment, decrement, reset } from '../redux/counter'
+import Swal from '../sweetalert'
+
 const _sum = require('lodash/fp/sum')
 
 const RightSection = ({ setSumOfCart }) => {
+  const { count } = useSelector((state) => state.counter)
+  const dispatch = useDispatch()
+
   let [counter, setCounter] = useState(0)
   let [cart, setCart] = useState([])
 
-  const fireCounter = (counterType) => {
-    if (counterType === 'plus') {
-      setCounter(++counter)
-    } else if (counter > 0) {
-      setCounter(--counter)
-    }
-  }
+  // const fireCounter = (counterType) => {
+  //   if (counterType === 'plus') {
+  //     setCounter(++counter)
+  //   } else if (counter > 0) {
+  //     setCounter(--counter)
+  //   }
+  // }
 
   const addToCart = () => {
-    if (counter > 0) {
+    if (count > 0) {
       Swal.fire({
         position: 'center',
         icon: 'success',
@@ -38,7 +42,7 @@ const RightSection = ({ setSumOfCart }) => {
         timer: 2500,
       })
     }
-    setCounter((counter = 0))
+    dispatch(reset())
   }
 
   useEffect(() => {
@@ -46,9 +50,6 @@ const RightSection = ({ setSumOfCart }) => {
     // console.log('sumOfCart', sumOfCart)
     setSumOfCart((prevState) => (prevState = _sum(cart)))
   }, [cart, setSumOfCart])
-
-  const { count } = useSelector((state) => state.counter)
-  const dispatch = useDispatch()
 
   return (
     <div className="right">
