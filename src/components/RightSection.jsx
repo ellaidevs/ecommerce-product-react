@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { ReactComponent as IconCart } from '../assets/icon-cart.svg'
 import { ReactComponent as IconMinus } from '../assets/icon-minus.svg'
 import { ReactComponent as IconPlus } from '../assets/icon-plus.svg'
@@ -7,21 +7,9 @@ import { increment, decrement, reset } from '../redux/counter'
 import { addToCart } from '../redux/cart'
 import Swal from '../sweetalert'
 
-const _sum = require('lodash/fp/sum')
-
-const RightSection = ({ setSumOfCart }) => {
+const RightSection = () => {
   const { count } = useSelector((state) => state.counter)
   const dispatch = useDispatch()
-
-  let [cart, setCart] = useState([])
-
-  // const fireCounter = (counterType) => {
-  //   if (counterType === 'plus') {
-  //     setCounter(++counter)
-  //   } else if (counter > 0) {
-  //     setCounter(--counter)
-  //   }
-  // }
 
   const clickCart = () => {
     if (count > 0) {
@@ -44,12 +32,6 @@ const RightSection = ({ setSumOfCart }) => {
     }
     dispatch(reset())
   }
-
-  // useEffect(() => {
-  //   // setSumOfCart((sumOfCart = _sum(cart))) //! Note: will use useRef in future development after studying useRef.
-  //   // console.log('sumOfCart', sumOfCart)
-  //   setSumOfCart((prevState) => (prevState = _sum(cart)))
-  // }, [cart, setSumOfCart])
 
   return (
     <div className="right">
