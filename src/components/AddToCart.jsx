@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { ReactComponent as IconCart } from '../assets/icon-cart.svg'
 import CartContent from './CartContent'
+import { useSelector } from 'react-redux'
 
-function AddToCart({ sumOfCart }) {
+function AddToCart() {
+  const cartValue = useSelector((state) => state.cart.value)
   let [toggleCart, setToggleCart] = useState(false)
-  const cartValue = sumOfCart.sumOfCart
 
   const showAddToCart = () => {
-    console.log('checking showAddToCart', cartValue)
+    // console.log('checking showAddToCart', cartValue)
     setToggleCart((toggleCart = !toggleCart))
   }
 
@@ -15,7 +16,7 @@ function AddToCart({ sumOfCart }) {
     <div className="svg-cart">
       {cartValue > 0 && <div className="cart-value">{cartValue}</div>}
       <IconCart onClick={showAddToCart} className="icon-cart" />
-      <CartContent cartValue={cartValue} toggleCart={toggleCart} />
+      <CartContent toggleCart={toggleCart} />
     </div>
   )
 }
