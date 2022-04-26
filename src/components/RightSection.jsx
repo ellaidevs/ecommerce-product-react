@@ -3,7 +3,8 @@ import { ReactComponent as IconCart } from '../assets/icon-cart.svg'
 import { ReactComponent as IconMinus } from '../assets/icon-minus.svg'
 import { ReactComponent as IconPlus } from '../assets/icon-plus.svg'
 import Swal from '../sweetalert'
-var _sum = require('lodash/fp/sum')
+import { useSelector, useDispatch } from 'react-redux'
+const _sum = require('lodash/fp/sum')
 
 const RightSection = ({ setSumOfCart }) => {
   let [counter, setCounter] = useState(0)
