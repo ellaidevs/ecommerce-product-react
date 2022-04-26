@@ -4,6 +4,7 @@ import { ReactComponent as IconMinus } from '../assets/icon-minus.svg'
 import { ReactComponent as IconPlus } from '../assets/icon-plus.svg'
 import Swal from '../sweetalert'
 import { useSelector, useDispatch } from 'react-redux'
+import { increment, decrement } from '../redux/counter'
 const _sum = require('lodash/fp/sum')
 
 const RightSection = ({ setSumOfCart }) => {
@@ -47,6 +48,7 @@ const RightSection = ({ setSumOfCart }) => {
   }, [cart, setSumOfCart])
 
   const { count } = useSelector((state) => state.counter)
+  const dispatch = useDispatch()
 
   return (
     <div className="right">
@@ -68,11 +70,11 @@ const RightSection = ({ setSumOfCart }) => {
       </div>
       <div className="cart-container">
         <div className="counter">
-          <div className="decrement" onClick={() => fireCounter('minus')}>
+          <div className="decrement" onClick={() => dispatch(decrement())}>
             <IconMinus />
           </div>
           <div className="number">{count}</div>
-          <div className="increment" onClick={() => fireCounter('plus')}>
+          <div className="increment" onClick={() => dispatch(increment())}>
             <IconPlus />
           </div>
         </div>
