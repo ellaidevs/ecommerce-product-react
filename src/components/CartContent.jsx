@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ReactComponent as IconDelete } from '../assets/icon-delete.svg'
 import product1Thumbnail from '../assets/image-product-1-thumbnail.jpg'
+import { useSelector, useDispatch } from 'react-redux'
+import { resetCart } from '../redux/cart'
 import Swal from '../sweetalert'
 
-function CartContent({ toggleCart, cartValue }) {
-  let [toggleContent, setToggleContent] = useState(true)
+function CartContent({ toggleCart }) {
+  const cartValue = useSelector((state) => state.cart.value)
+  const dispatch = useDispatch()
 
   const clearCart = () => {
     Swal.fire({
@@ -15,18 +18,18 @@ function CartContent({ toggleCart, cartValue }) {
       denyButtonText: `No`,
     }).then((result) => {
       if (result.isConfirmed) {
+        dispatch(resetCart())
         Swal.fire({
           title: 'Cart have been cleared!',
           icon: 'success',
           showConfirmButton: false,
         })
-        setToggleContent(false)
       }
     })
   }
 
   let cartContent
-  if (toggleContent && cartValue > 0) {
+  if (cartValue > 0) {
     cartContent = (
       <div className="content">
         <div className="cart-content">

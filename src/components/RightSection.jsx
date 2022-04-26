@@ -1,26 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { ReactComponent as IconCart } from '../assets/icon-cart.svg'
 import { ReactComponent as IconMinus } from '../assets/icon-minus.svg'
 import { ReactComponent as IconPlus } from '../assets/icon-plus.svg'
+import { useSelector, useDispatch } from 'react-redux'
+import { increment, decrement, reset } from '../redux/counter'
+import { addToCart } from '../redux/cart'
 import Swal from '../sweetalert'
-var at = require('lodash/at')
-var _sum = require('lodash/fp/sum')
 
-const RightSection = ({ setSumOfCart }) => {
-  let [counter, setCounter] = useState(0)
-  let [cart, setCart] = useState([])
-  // let [sumOfCart, setSumOfCart] = useState(0)
+const RightSection = () => {
+  const { count } = useSelector((state) => state.counter)
+  const dispatch = useDispatch()
 
-  const fireCounter = (counterType) => {
-    if (counterType === 'plus') {
-      setCounter(++counter)
-    } else if (counter > 0) {
-      setCounter(--counter)
-    }
-  }
-
-  const addToCart = () => {
-    if (counter > 0) {
+  const clickCart = () => {
+    if (count > 0) {
+      dispatch(addToCart(count))
       Swal.fire({
         position: 'center',
         icon: 'success',
@@ -28,7 +21,6 @@ const RightSection = ({ setSumOfCart }) => {
         showConfirmButton: false,
         timer: 2500,
       })
-      setCart(cart.concat(counter))
     } else {
       Swal.fire({
         position: 'center',
@@ -38,14 +30,8 @@ const RightSection = ({ setSumOfCart }) => {
         timer: 2500,
       })
     }
-    setCounter((counter = 0))
+    dispatch(reset())
   }
-
-  useEffect(() => {
-    // setSumOfCart((sumOfCart = _sum(cart))) //! Note: will use useRef in future development after studying useRef.
-    // console.log('sumOfCart', sumOfCart)
-    setSumOfCart((prevState) => (prevState = _sum(cart)))
-  }, [cart])
 
   return (
     <div className="right">
@@ -67,16 +53,16 @@ const RightSection = ({ setSumOfCart }) => {
       </div>
       <div className="cart-container">
         <div className="counter">
-          <div className="decrement" onClick={() => fireCounter('minus')}>
+          <div className="decrement" onClick={() => dispatch(decrement())}>
             <IconMinus />
           </div>
-          <div className="number">{counter}</div>
-          <div className="increment" onClick={() => fireCounter('plus')}>
+          <div className="number">{count}</div>
+          <div className="increment" onClick={() => dispatch(increment())}>
             <IconPlus />
           </div>
         </div>
         <div className="addToCartBtn">
-          <button onClick={() => addToCart()}>
+          <button onClick={() => clickCart()}>
             <IconCart className="btn-cart-svg" />
             Add to cart
           </button>
