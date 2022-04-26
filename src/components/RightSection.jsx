@@ -4,6 +4,7 @@ import { ReactComponent as IconMinus } from '../assets/icon-minus.svg'
 import { ReactComponent as IconPlus } from '../assets/icon-plus.svg'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement, reset } from '../redux/counter'
+import { addToCart } from '../redux/cart'
 import Swal from '../sweetalert'
 
 const _sum = require('lodash/fp/sum')
@@ -12,7 +13,6 @@ const RightSection = ({ setSumOfCart }) => {
   const { count } = useSelector((state) => state.counter)
   const dispatch = useDispatch()
 
-  let [counter, setCounter] = useState(0)
   let [cart, setCart] = useState([])
 
   // const fireCounter = (counterType) => {
@@ -23,8 +23,9 @@ const RightSection = ({ setSumOfCart }) => {
   //   }
   // }
 
-  const addToCart = () => {
+  const clickCart = () => {
     if (count > 0) {
+      dispatch(addToCart(count))
       Swal.fire({
         position: 'center',
         icon: 'success',
@@ -32,7 +33,6 @@ const RightSection = ({ setSumOfCart }) => {
         showConfirmButton: false,
         timer: 2500,
       })
-      setCart(cart.concat(counter))
     } else {
       Swal.fire({
         position: 'center',
@@ -45,11 +45,11 @@ const RightSection = ({ setSumOfCart }) => {
     dispatch(reset())
   }
 
-  useEffect(() => {
-    // setSumOfCart((sumOfCart = _sum(cart))) //! Note: will use useRef in future development after studying useRef.
-    // console.log('sumOfCart', sumOfCart)
-    setSumOfCart((prevState) => (prevState = _sum(cart)))
-  }, [cart, setSumOfCart])
+  // useEffect(() => {
+  //   // setSumOfCart((sumOfCart = _sum(cart))) //! Note: will use useRef in future development after studying useRef.
+  //   // console.log('sumOfCart', sumOfCart)
+  //   setSumOfCart((prevState) => (prevState = _sum(cart)))
+  // }, [cart, setSumOfCart])
 
   return (
     <div className="right">
@@ -80,7 +80,7 @@ const RightSection = ({ setSumOfCart }) => {
           </div>
         </div>
         <div className="addToCartBtn">
-          <button onClick={() => addToCart()}>
+          <button onClick={() => clickCart()}>
             <IconCart className="btn-cart-svg" />
             Add to cart
           </button>
