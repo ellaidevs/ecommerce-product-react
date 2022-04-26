@@ -1,5 +1,7 @@
 # Documentation
 
+Ongoing project last updated: 26 April 2022
+
 ### Live Site
 https://ellai-ecommerce.netlify.app/
 
