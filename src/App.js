@@ -18,5 +18,9 @@ function App() {
     </div>
   )
 }
+//? Todo: Redux implementation
+//! setToggleOverlay --> Section --> LeftSection --> DisplayProducts
+//! setToggleOverlay --> OverlayProduct --> DisplayProducts
+//! toggleOverlay -->  OverlayProduct
 
 export default App
