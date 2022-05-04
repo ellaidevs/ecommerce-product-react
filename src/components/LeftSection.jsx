@@ -1,10 +1,10 @@
 import React from 'react'
 import DisplayProducts from './DisplayProducts'
 
-const LeftSection = ({ isRoot }) => {
+const LeftSection = () => {
   return (
     <div className="left">
-      <DisplayProducts isRoot={isRoot} />
+      <DisplayProducts isRoot={false} />
     </div>
   )
 }

@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <OverlayProduct />
       <NavBar />
-      <Section isRoot={false} />
+      <Section />
     </div>
   )
 }
