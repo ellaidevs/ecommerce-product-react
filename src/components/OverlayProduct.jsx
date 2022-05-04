@@ -1,16 +1,15 @@
 import React from 'react'
 import DisplayProducts from './DisplayProducts'
+import { useSelector } from 'react-redux'
 
-function OverlayProduct({ toggleOverlay, setToggleOverlay }) {
+function OverlayProduct() {
+  const toggle = useSelector((state) => state.toggle.value)
   return (
     <div>
-      {toggleOverlay && (
+      {toggle && (
         <div className="overlay">
           <div className="left">
-            <DisplayProducts
-              isRoot={true}
-              setToggleOverlay={setToggleOverlay}
-            />
+            <DisplayProducts isRoot={true} />
           </div>
         </div>
       )}

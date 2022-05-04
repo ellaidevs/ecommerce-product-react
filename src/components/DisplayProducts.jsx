@@ -7,8 +7,11 @@ import product4Thumbnail from '../assets/image-product-4-thumbnail.jpg'
 import { ReactComponent as IconClose } from '../assets/icon-close.svg'
 import { ReactComponent as IconPrevious } from '../assets/icon-previous.svg'
 import { ReactComponent as IconNext } from '../assets/icon-next.svg'
+import { useDispatch } from 'react-redux'
+import { setToggleOverlay } from '../redux/toggleOverlay'
 
-function DisplayProducts({ setToggleOverlay, isRoot }) {
+function DisplayProducts({ isRoot }) {
+  const dispatch = useDispatch()
   let [imgCounter, setImgCounter] = useState(1)
   let [currentProduct, setCurrentProduct] = useState(`product-${imgCounter}`)
 
@@ -23,12 +26,12 @@ function DisplayProducts({ setToggleOverlay, isRoot }) {
 
   const popProductSelection = () => {
     if (!isRoot) {
-      setToggleOverlay((prevState) => !prevState)
+      dispatch(setToggleOverlay())
     }
   }
 
   const closeOverlay = () => {
-    setToggleOverlay((prevState) => !prevState)
+    dispatch(setToggleOverlay())
   }
 
   useEffect(() => {
