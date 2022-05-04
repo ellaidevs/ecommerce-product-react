@@ -9,10 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <OverlayProduct
-        toggleOverlay={toggleOverlay}
-        setToggleOverlay={setToggleOverlay}
-      />
+      <OverlayProduct setToggleOverlay={setToggleOverlay} />
       <NavBar />
       <Section setToggleOverlay={setToggleOverlay} isRoot={false} />
     </div>
