@@ -1,17 +1,14 @@
 import './App.scss'
 import NavBar from './components/NavBar'
 import Section from './components/Section'
-import { useState } from 'react'
 import OverlayProduct from './components/OverlayProduct'
 
 function App() {
-  let [toggleOverlay, setToggleOverlay] = useState(false)
-
   return (
     <div className="App">
-      <OverlayProduct setToggleOverlay={setToggleOverlay} />
+      <OverlayProduct />
       <NavBar />
-      <Section setToggleOverlay={setToggleOverlay} isRoot={false} />
+      <Section isRoot={false} />
     </div>
   )
 }

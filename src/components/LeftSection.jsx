@@ -1,10 +1,10 @@
 import React from 'react'
 import DisplayProducts from './DisplayProducts'
 
-const LeftSection = ({ setToggleOverlay, isRoot }) => {
+const LeftSection = ({ isRoot }) => {
   return (
     <div className="left">
-      <DisplayProducts setToggleOverlay={setToggleOverlay} isRoot={isRoot} />
+      <DisplayProducts isRoot={isRoot} />
     </div>
   )
 }
