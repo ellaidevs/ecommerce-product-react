@@ -42,4 +42,14 @@
   .nav-title {
     color: red;
   }
+
+  .nav {
+    .categories{
+      display: none;
+      flex-direction: column;
+    }
+
+  
+  }
+
 }
