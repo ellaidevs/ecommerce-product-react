@@ -12,6 +12,10 @@
     gap: 4.5em;
   }
 
+  .hamburger-menu{
+    display: node;
+  }
+
   .nav-title {
     margin-left: 1em;
   }
@@ -47,6 +51,10 @@
     .categories{
       display: none;
       flex-direction: column;
+    }
+
+    .hamburger-menu{
+      display: block;
     }
 
   
