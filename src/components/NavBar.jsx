@@ -3,6 +3,10 @@ import Categories from './Categories'
 import NavbarRight from './NavbarRight'
 import { ReactComponent as HamburgerMenu } from '../assets/icon-menu.svg'
 const NavBar = () => {
+  // ! TODO 6th May 2022
+  // TODO: 1. Fix hamburger menu rendering spaces and margin, 2. Add proper spacing for left navbar and right navbar when hit mobile viewport
+  // TODO: 3. Toggle categories display when clicked on hamburger menu. 4. When the categories is displayed at mobile view, handle the scss to display the categories as sidebar.
+  // TODO: Once completed mobile navbar, merge mobile-nav -> staging
   const handleSidebar = () => {
     console.log('side bar clicked')
   }
