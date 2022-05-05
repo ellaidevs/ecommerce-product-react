@@ -46,23 +46,25 @@
 //mobile view
 @media (max-width: 820px) {
   .nav-title {
-    color: red;
+    // color: red;
   }
 
   .nav {
     .container{
+      gap: 1rem;
 
-    .categories{
-      display: none;
-      flex-direction: column;
-     
-        .hamburger-menu{
-          display: block;
-        }
-    
-        .nav-title {
-          margin-left: 0;
-        }
+      .hamburger-menu{
+        display: block;
+        cursor: pointer;
+      }
+  
+      .nav-title {
+        margin-left: 0;
+      } 
+
+      .categories{
+        display: none;
+        flex-direction: column;
       } 
     }
   }
