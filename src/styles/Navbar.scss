@@ -11,14 +11,13 @@
     display: flex;
     gap: 4.5em;
 
-    .hamburger-menu{
-      margin: 2rem 0 0 1rem;
+    .hamburger-menu {
       min-width: 1rem;
       display: none;
     }
-  
+
     .nav-title {
-      margin-left: 1em;
+      margin-left: 2rem;
     }
 
     .categories {
@@ -39,9 +38,7 @@
   }
 }
 
-
 // mobile
-
 
 //mobile view
 @media (max-width: 820px) {
@@ -50,22 +47,23 @@
   }
 
   .nav {
-    .container{
+    .container {
       gap: 1rem;
 
-      .hamburger-menu{
+      .hamburger-menu {
         display: block;
         cursor: pointer;
+        margin: 1.5rem 0 0 1rem;
       }
-  
-      .nav-title {
-        margin-left: 0;
-      } 
 
-      .categories{
+      .nav-title {
+        margin: 0.5rem 0 0 0;
+      }
+
+      .categories {
         display: none;
         flex-direction: column;
-      } 
+      }
     }
   }
 }
