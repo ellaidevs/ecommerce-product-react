@@ -143,7 +143,7 @@
       }
 
       .avatar {
-        height: 3em;
+        height: 3rem;
 
         &:hover {
           cursor: pointer;
@@ -167,6 +167,8 @@
   }
 
   .nav {
+    min-width: 270px;
+
     .container {
       gap: 1rem;
 
@@ -191,6 +193,13 @@
 
       .navbar-right {
         margin-right: 0rem;
+        gap: 0.5rem;
+        // justify-content: flex-start;
+
+        .avatar {
+          height: 2rem;
+          margin: 0.5rem 1rem 0 0;
+        }
       }
     }
   }
