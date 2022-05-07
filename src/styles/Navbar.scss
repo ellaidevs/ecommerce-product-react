@@ -20,6 +20,10 @@
       margin-left: 2rem;
     }
 
+    .sidebar {
+      display: none;
+    }
+
     .categories {
       display: flex;
       gap: 1em;
@@ -187,8 +191,23 @@
       }
 
       .categories {
-        display: none;
         flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+        position: absolute;
+        background-color: hsl(0, 0%, 100%);
+        background-color: red;
+        height: 100vh;
+        width: 60vw;
+        margin-top: 0;
+
+        h3 {
+          margin: 0 auto;
+        }
+      }
+
+      .hide-categories {
+        display: none;
       }
 
       .navbar-right {
