@@ -1,5 +1,5 @@
 @import 'styles/Navbar.scss', 'styles/Section.scss', 'styles/LeftSection.scss',
-  'styles/RightSection.scss', 'styles/NavbarRight.scss';
+  'styles/RightSection.scss';
 
 body {
   background-color: hsl(0, 0%, 100%);
@@ -17,11 +17,4 @@ body {
   height: 100%;
   width: 100%;
   z-index: 1;
-}
-
-//mobile view
-@media (max-width: 810px) {
-  .nav-title {
-    color: red;
-  }
 }
