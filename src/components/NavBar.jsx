@@ -6,7 +6,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setToggleSidebar } from '../redux/sidebar'
 const NavBar = () => {
   // ! TODO 7th May 2022
-  // TODO: 3. Toggle categories display when clicked on hamburger menu. 4. When the categories is displayed at mobile view, handle the scss to display the categories as sidebar.
+  // TODO: 1.Add X svg to categories. 2. Hide X button at web and position relative. 3.make other categories add margin-top when X svg appear at mobile
+  // TODO 4. Add proper style for sidebar
   // TODO: Once completed mobile navbar, merge mobile-nav -> staging
 
   const dispatch = useDispatch()
