@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 const Categories = () => {
   const toggleSidebar = useSelector((state) => state.sidebar.value)
   return (
-    <div className={toggleSidebar ? 'categories mobile-sidebar' : 'categories'}>
+    <div className={toggleSidebar ? 'categories' : 'hide-categories'}>
       <h3>Collections</h3>
       <h3>Men</h3>
       <h3>Women</h3>
