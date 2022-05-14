@@ -204,11 +204,12 @@
         height: 100vh;
         width: 60vw;
         z-index: 1;
+        background-color: red;
+        margin-top: 0;
 
         .nav-close-icon {
           display: block;
-          margin-bottom: 2.5rem;
-          margin-left: 1.5rem;
+          margin: 1rem 0 2.5rem 1.5rem;
 
           &:hover {
             cursor: pointer;
@@ -217,8 +218,7 @@
         }
 
         h3 {
-          margin-top: 0.5rem;
-          margin-left: 1.5rem;
+          margin: 0.5rem 0 0 1.5rem;
 
           &:hover {
             border-bottom: 0px;
