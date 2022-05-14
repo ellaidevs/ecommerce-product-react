@@ -31,6 +31,10 @@
       justify-content: space-between;
       color: hsl(219, 9%, 45%);
 
+      .nav-close-icon {
+        display: none;
+      }
+
       h3 {
         &:hover {
           cursor: pointer;
@@ -193,16 +197,32 @@
       .categories {
         flex-direction: column;
         justify-content: flex-start;
-        gap: 2rem;
+        align-items: flex-start;
+        gap: 0;
         position: absolute;
         background-color: hsl(0, 0%, 100%);
-        background-color: red;
         height: 100vh;
         width: 60vw;
-        margin-top: 0;
+        z-index: 1;
+
+        .nav-close-icon {
+          display: block;
+          margin-bottom: 2.5rem;
+          margin-left: 1.5rem;
+
+          &:hover {
+            cursor: pointer;
+            color: hsl(26, 100%, 55%);
+          }
+        }
 
         h3 {
-          margin: 0 auto;
+          margin-top: 0.5rem;
+          margin-left: 1.5rem;
+
+          &:hover {
+            border-bottom: 0px;
+          }
         }
       }
 
