@@ -233,9 +233,11 @@
         position: absolute;
         background-color: hsl(0, 0%, 100%);
         height: 100vh;
-        width: 60vw;
+        max-width: 60vw;
+        min-width: 150px !important;
         z-index: 1;
         margin-top: 0;
+        // max-width: 310px;
       }
 
       .hide-categories {
