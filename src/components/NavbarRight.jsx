@@ -5,7 +5,7 @@ import AddToCart from './AddToCart'
 const NavbarRight = () => {
   return (
     <div className="navbar-right">
-      <AddToCart />
+      <AddToCart className="addToCartIcon" />
       <div className="avatar">
         <img src={Avatar} alt="profile" />
       </div>
