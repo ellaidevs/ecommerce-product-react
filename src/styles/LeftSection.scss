@@ -62,3 +62,12 @@
     }
   }
 }
+
+// mobile view
+@media (max-width: 820px) {
+  .left {
+    .thumnails {
+      display: none;
+    }
+  }
+}
