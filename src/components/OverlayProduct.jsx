@@ -4,15 +4,19 @@ import { useSelector } from 'react-redux'
 
 function OverlayProduct() {
   const toggle = useSelector((state) => state.toggle.value)
+  const sidebarToggle = useSelector((state) => state.sidebar.value)
+
   return (
     <div>
-      {toggle && (
-        <div className="overlay">
-          <div className="left">
-            <DisplayProducts isRoot={true} />
+      <div className={!sidebarToggle ? '' : ' mobile-sidebar-active'}>
+        {toggle && (
+          <div className="overlay">
+            <div className="left">
+              <DisplayProducts isRoot={true} />
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   )
 }

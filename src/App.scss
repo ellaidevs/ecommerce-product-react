@@ -3,12 +3,18 @@
 
 body {
   background-color: hsl(0, 0%, 100%);
-  // overflow: hidden;
 }
 
 .App {
   text-align: center;
   font-family: 'Kumbh Sans', sans-serif;
+  overflow: hidden;
+}
+
+.mobile-sidebar-active {
+  background-color: hsl(0, 0%, 100%);
+  position: static;
+  z-index: 0;
 }
 
 .overlay {
@@ -17,4 +23,15 @@ body {
   height: 100%;
   width: 100%;
   z-index: 1;
+}
+
+//mobile view
+@media (max-width: 820px) {
+  .mobile-sidebar-active {
+    background-color: rgba(6, 1, 1, 0.735);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
 }
