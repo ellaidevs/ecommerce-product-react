@@ -66,6 +66,14 @@
 // mobile view
 @media (max-width: 820px) {
   .left {
+    .product-display {
+      height: 20em;
+
+      img {
+        border-radius: 0px;
+      }
+    }
+
     .thumnails {
       display: none;
     }
