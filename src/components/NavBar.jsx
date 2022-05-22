@@ -20,7 +20,6 @@ const NavBar = () => {
         <Categories />
         <NavbarRight />
       </div>
-      <hr />
     </div>
   )
 }
