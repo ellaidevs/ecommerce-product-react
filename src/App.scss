@@ -10,6 +10,11 @@ body {
   overflow: hidden;
 }
 
+hr {
+  margin: 0 2em;
+  opacity: 0.2;
+}
+
 .mobile-sidebar-active {
   background-color: hsl(0, 0%, 100%);
   position: static;
