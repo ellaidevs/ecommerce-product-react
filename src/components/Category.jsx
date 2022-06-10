@@ -7,6 +7,10 @@ import { setToggleMobileSideBar } from '../redux/mobileSideBar'
 function Category(props) {
   const dispatch = useDispatch()
 
+  console.log('test 1')
+  console.log('test 2')
+  console.log('test 3')
+
   const fireNavCancelIcon = () => {
     dispatch(setToggleSidebar())
     dispatch(setToggleMobileSideBar())
