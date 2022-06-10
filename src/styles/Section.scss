@@ -208,10 +208,21 @@
   // left
   .left {
     .product-display {
-      height: 20em;
+      // position: absolute;
+      // // left: 25%;
+      // text-align: center;
+      // margin: auto;
+      // margin-left: -35%;
+      // width: 100vw;
 
       img {
         border-radius: 0px;
+        position: absolute;
+        // left: 25%;
+        text-align: center;
+        margin: auto;
+        // width: 100%;
+        // height: auto;
       }
     }
 
