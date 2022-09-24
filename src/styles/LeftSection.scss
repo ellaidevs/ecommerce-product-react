@@ -46,10 +46,14 @@
     height: 6em;
     justify-content: center;
 
-    img {
-      width: auto;
-      max-height: 100%;
-      border-radius: 10px;
+    .toggle-image-container {
+      border-radius: 8px;
+
+      .toggle-image {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+      }
     }
 
     &:hover {

@@ -17,11 +17,13 @@ function DisplayProducts({ isRoot }) {
 
   const image = require(`../assets/image-${currentProduct}.jpg`) //lazy load main display picture
   const mainProductImg = (
+    // <div>
     <img
       onClick={() => popProductSelection(currentProduct)}
       src={image}
       alt="main-product-display"
     />
+    // </div>
   )
 
   const popProductSelection = () => {
@@ -62,30 +64,53 @@ function DisplayProducts({ isRoot }) {
       )}
 
       <div className="thumnails">
-        <img
-          onClick={() => setImgCounter(1)}
-          src={product1Thumbnail}
-          alt="thumnail1"
-          className={`${currentProduct === 'product-1' ? 'active' : ''}`}
-        />
-        <img
-          onClick={() => setImgCounter(2)}
-          src={product2Thumbnail}
-          alt="thumnail2"
-          className={`${currentProduct === 'product-2' ? 'active' : ''}`}
-        />
-        <img
-          onClick={() => setImgCounter(3)}
-          src={product3Thumbnail}
-          alt="thumnail3"
-          className={`${currentProduct === 'product-3' ? 'active' : ''}`}
-        />
-        <img
-          onClick={() => setImgCounter(4)}
-          src={product4Thumbnail}
-          alt="thumnail4"
-          className={`${currentProduct === 'product-4' ? 'active' : ''}`}
-        />
+        <div
+          className={`toggle-image-container ${
+            currentProduct === 'product-1' ? 'active' : ''
+          }`}
+        >
+          <img
+            onClick={() => setImgCounter(1)}
+            src={product1Thumbnail}
+            alt="thumnail1"
+            className="toggle-image"
+          />
+        </div>
+
+        <div className={`0 ${currentProduct === 'product-2' ? 'active' : ''}`}>
+          <img
+            onClick={() => setImgCounter(2)}
+            src={product2Thumbnail}
+            alt="thumnail2"
+            className="toggle-image"
+          />
+        </div>
+
+        <div
+          className={`toggle-image-container ${
+            currentProduct === 'product-3' ? 'active' : ''
+          }`}
+        >
+          <img
+            onClick={() => setImgCounter(3)}
+            src={product3Thumbnail}
+            alt="thumnail3"
+            className="toggle-image"
+          />
+        </div>
+
+        <div
+          className={`toggle-image-container ${
+            currentProduct === 'product-4' ? 'active' : ''
+          }`}
+        >
+          <img
+            onClick={() => setImgCounter(4)}
+            src={product4Thumbnail}
+            alt="thumnail4"
+            className="toggle-image"
+          />
+        </div>
       </div>
     </div>
   )
