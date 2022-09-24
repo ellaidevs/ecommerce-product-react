@@ -77,7 +77,11 @@ function DisplayProducts({ isRoot }) {
           />
         </div>
 
-        <div className={`0 ${currentProduct === 'product-2' ? 'active' : ''}`}>
+        <div
+          className={`toggle-image-container ${
+            currentProduct === 'product-2' ? 'active' : ''
+          }`}
+        >
           <img
             onClick={() => setImgCounter(2)}
             src={product2Thumbnail}
