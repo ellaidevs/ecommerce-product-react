@@ -19,6 +19,7 @@ function DisplayProducts({ isRoot }) {
   const mainProductImg = (
     // <div>
     <img
+      className="product-display"
       onClick={() => popProductSelection(currentProduct)}
       src={image}
       alt="main-product-display-container"
