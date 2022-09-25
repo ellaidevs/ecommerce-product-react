@@ -3,12 +3,34 @@
   justify-content: center;
   align-items: center;
   height: 90vh;
-  // background-color: red;
   gap: 1em;
 
   .left,
   .right {
     width: 90vh;
     height: 70vh;
+  }
+}
+
+@media (max-width: 820px) {
+  //overall
+  .section {
+    display: block;
+  }
+
+  // left
+  .left {
+    .product-display-container {
+      .product-display {
+        border-radius: 0px;
+        position: absolute;
+        text-align: center;
+        margin: auto;
+      }
+    }
+
+    .thumbnails {
+      display: none;
+    }
   }
 }

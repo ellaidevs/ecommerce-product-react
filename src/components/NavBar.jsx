@@ -16,11 +16,12 @@ const NavBar = () => {
     <div className="nav">
       <div className="container">
         <HamburgerMenu onClick={fireHamburgerMenu} className="hamburger-menu" />
-        <h1 className="nav-title">sneakerss</h1>
+
+        <h2 className="nav-title">Sole Mates</h2>
+
         <Categories />
         <NavbarRight />
       </div>
-      <hr />
     </div>
   )
 }
