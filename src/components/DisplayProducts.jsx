@@ -64,7 +64,7 @@ function DisplayProducts({ isRoot }) {
         <div className="product-display-container">{mainProductImg}</div>
       )}
 
-      <div className="thumnails">
+      <div className="thumbnails">
         <div
           className={`toggle-image-container ${
             currentProduct === 'product-1' ? 'active' : ''
