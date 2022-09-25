@@ -2,7 +2,7 @@ import './App.scss'
 import NavBar from './components/NavBar'
 import Section from './components/Section'
 import OverlayProduct from './components/OverlayProduct'
-// Todo: please add sidebar mobile view to staging, must go through some conflict 
+// Todo: please add sidebar mobile view to staging, must go through some conflict: 25th September
 function App() {
   return (
     <div className="App">
