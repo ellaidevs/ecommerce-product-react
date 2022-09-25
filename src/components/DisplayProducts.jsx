@@ -21,7 +21,7 @@ function DisplayProducts({ isRoot }) {
     <img
       onClick={() => popProductSelection(currentProduct)}
       src={image}
-      alt="main-product-display"
+      alt="main-product-display-container"
     />
     // </div>
   )
@@ -53,14 +53,14 @@ function DisplayProducts({ isRoot }) {
       {isRoot ? (
         <div className="display-root">
           <IconClose onClick={closeOverlay} className="icon-close" />
-          <div className="product-display">
+          <div className="product-display-container">
             <IconPrevious className="icon-previous" onClick={getPreviousPic} />
             {mainProductImg}
             <IconNext className="icon-next" onClick={getNextPic} />
           </div>
         </div>
       ) : (
-        <div className="product-display">{mainProductImg}</div>
+        <div className="product-display-container">{mainProductImg}</div>
       )}
 
       <div className="thumnails">
