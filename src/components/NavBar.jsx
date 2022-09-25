@@ -5,6 +5,7 @@ import { ReactComponent as HamburgerMenu } from '../assets/icon-menu.svg'
 import { useDispatch } from 'react-redux'
 import { setToggleSidebar } from '../redux/sidebar'
 import { setToggleMobileSideBar } from '../redux/mobileSideBar'
+import 'animate.css'
 const NavBar = () => {
   const dispatch = useDispatch()
 
@@ -16,7 +17,7 @@ const NavBar = () => {
     <div className="nav">
       <div className="container">
         <HamburgerMenu onClick={fireHamburgerMenu} className="hamburger-menu" />
-        <h1 className="nav-title">sneakers</h1>
+        <h2 className="nav-title">Sole Mates</h2>
         <Categories />
         <NavbarRight />
       </div>

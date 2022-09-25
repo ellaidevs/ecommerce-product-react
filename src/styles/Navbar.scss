@@ -1,18 +1,31 @@
 .nav {
   height: 4.5em;
   position: relative;
+  display: flex;
 
   .container {
     display: flex;
-    gap: 4.5em;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
 
     .hamburger-menu {
-      min-width: 1rem;
       display: none;
     }
 
     .nav-title {
-      margin-left: 2rem;
+      margin: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 200px;
+      animation: swing;
+      animation-duration: 1s;
+
+      &:hover {
+        animation: pulse;
+        animation-duration: 1s; /* don't forget to set a duration! */
+      }
     }
 
     .sidebar {
@@ -22,12 +35,15 @@
     .categories {
       display: flex;
       gap: 1em;
-      margin-top: 1em;
       justify-content: space-between;
       color: hsl(219, 9%, 45%);
 
       .nav-close-icon {
         display: none;
+      }
+
+      h3 {
+        margin: 0px;
       }
 
       h3 {
@@ -173,13 +189,13 @@
       gap: 1rem;
 
       .hamburger-menu {
-        display: block;
+        display: flex;
         cursor: pointer;
-        margin: 1.5rem 0 0 1rem;
+        padding-left: 1rem; //todo
       }
 
       .nav-title {
-        margin: 0.5rem 0 0 0;
+        min-width: 130px;
       }
 
       .icon-cart {
