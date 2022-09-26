@@ -1,5 +1,6 @@
 .nav {
   height: 4.5em;
+  width: 100vw;
   position: relative;
   display: flex;
 
@@ -8,23 +9,35 @@
     align-items: center;
     justify-content: space-around;
     gap: 2rem;
+    width: 100vw;
 
     .hamburger-menu {
       display: none;
     }
 
-    .nav-title {
-      margin: 0px;
+    .logo-img-container {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 200px;
-      animation: swing;
-      animation-duration: 1s;
+      justify-content: flex-start;
+      gap: 10px;
+      padding-left: 2.5rem;
 
-      &:hover {
-        animation: pulse;
-        animation-duration: 1s; /* don't forget to set a duration! */
+      .logo-img {
+        max-height: 2.5rem;
+        width: auto;
+      }
+
+      .nav-title {
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        min-width: 200px;
+        animation: swing;
+        animation-duration: 1s;
+
+        &:hover {
+          animation: pulse;
+          animation-duration: 1s; /* don't forget to set a duration! */
+        }
       }
     }
 
@@ -62,7 +75,7 @@
       gap: 2em;
       width: 100vh;
       justify-content: flex-end;
-      margin-right: 6rem;
+      padding-right: 4rem;
 
       .svg-cart {
         svg {
@@ -186,16 +199,29 @@
     height: 3.5em;
 
     .container {
-      gap: 1rem;
+      gap: 0;
 
       .hamburger-menu {
         display: flex;
         cursor: pointer;
-        padding-left: 1rem; //todo
+        min-width: 30px;
+        padding-left: 15px;
       }
 
-      .nav-title {
-        min-width: 130px;
+      .website-logo-container {
+        .logo-img-container {
+          padding-left: 0;
+        }
+
+        .logo-img {
+          max-height: 1.8rem;
+          width: auto;
+          padding-bottom: 5px;
+        }
+
+        .nav-title {
+          display: none !important;
+        }
       }
 
       .icon-cart {
@@ -253,7 +279,7 @@
       }
 
       .navbar-right {
-        margin-right: 0rem;
+        padding-right: 1rem;
         gap: 0.5rem;
         // justify-content: flex-start;
 
