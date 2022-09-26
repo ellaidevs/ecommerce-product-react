@@ -61,10 +61,12 @@
         margin: 0px;
       }
 
-      h3 {
+      .category-link-tag {
+        text-decoration: none;
+        color: hsl(219, 9%, 45%);
+
         &:hover {
           cursor: pointer;
-          border-bottom: 3px solid hsl(26, 100%, 55%);
           color: hsl(26, 100%, 55%);
         }
       }

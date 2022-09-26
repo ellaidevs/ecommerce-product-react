@@ -18,11 +18,35 @@ function Category(props) {
   return (
     <div className="categories">
       <CancelIcon className="nav-close-icon" onClick={fireNavCancelIcon} />
-      <h3>Collections</h3>
-      <h3>Men</h3>
-      <h3>Women</h3>
-      <h3>About</h3>
-      <h3>Contact</h3>
+      <h3>
+        <a href="/" className="category-link-tag">
+          Collections
+        </a>
+      </h3>
+      <h3>
+        <a href="/" className="category-link-tag">
+          Men
+        </a>
+      </h3>
+      <h3>
+        <a href="/" className="category-link-tag">
+          Women
+        </a>
+      </h3>
+      <h3>
+        <a href="/" className="category-link-tag">
+          About
+        </a>
+      </h3>
+      <h3>
+        <a href="/" className="category-link-tag">
+          Contact
+        </a>
+      </h3>
+      {/* <h3></h3>
+      <h3></h3>
+      <h3></h3>
+      <h3></h3> */}
     </div>
   )
 }
