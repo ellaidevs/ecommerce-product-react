@@ -19,6 +19,13 @@
       align-items: center;
       justify-content: center;
       min-width: 200px;
+      animation: swing;
+      animation-duration: 1s;
+
+      &:hover {
+        animation: pulse;
+        animation-duration: 1s; /* don't forget to set a duration! */
+      }
     }
 
     .sidebar {
