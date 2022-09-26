@@ -2,6 +2,7 @@ import './App.scss'
 import NavBar from './components/NavBar'
 import Section from './components/Section'
 import OverlayProduct from './components/OverlayProduct'
+import 'animate.css'
 
 function App() {
   return (
