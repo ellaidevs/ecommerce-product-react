@@ -7,7 +7,6 @@ import { setToggleSidebar } from '../redux/sidebar'
 import { setToggleMobileSideBar } from '../redux/mobileSideBar'
 import logo from '../assets/soleMate.png'
 
-import 'animate.css'
 const NavBar = () => {
   const dispatch = useDispatch()
 
